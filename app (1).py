@@ -9,7 +9,7 @@ uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
 
 # Load the default dataset
 try:
-    default_df = pd.read_csv('/content/amazon_delivery.csv')
+    default_df = pd.read_csv('amazon_delivery.csv')
 except FileNotFoundError:
     st.error("Default dataset 'amazon_delivery.csv' not found. Please ensure it's in the /content directory.")
     default_df = pd.DataFrame() # Initialize an empty DataFrame if default not found
